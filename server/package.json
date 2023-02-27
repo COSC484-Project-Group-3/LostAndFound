@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mongoose": "^6.9.2"
+  },
+  "name": "lostandfound-api",
+  "version": "1.0.0",
+  "description": "API used for LostAndFound webapp",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/COSC484-Project-Group-3/LostAndFound.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/COSC484-Project-Group-3/LostAndFound/issues"
+  },
+  "homepage": "https://github.com/COSC484-Project-Group-3/LostAndFound#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
