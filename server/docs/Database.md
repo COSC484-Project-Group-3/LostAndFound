@@ -13,6 +13,7 @@ Below is how each schema is defined in the database.
 | full_name | `NOT NULL` | varchar | |
 | username | `NOT NULL` | varchar | |
 | password | `NOT NULL` | varchar | |
+| profile_picture| | varchar | |
 | contact_info | | varchar | |
 | created_at | `NOT NULL` | timestamp | |
 | updated_at | `NOT NULL` | timestamp | |
