@@ -1,5 +1,7 @@
 # LostAndFound
 
+The Lost and Found Web Application is designed to solve the problem of lost personal items by providing a platform where users can post information about their lost items and connect with others who may have found them. 
+
 ## Installation
 
 To Run `LostAndFound` Locally:
