@@ -30,6 +30,21 @@ export class PostController {
     }
 
     /**
+     * Get all posts within a distance
+     * 
+     * @param {*} req request object
+     * @param {*} res response object
+     * @returns {*} all posts within the distance
+     * @returns {*} 500 if there is an error
+     * @returns {*} 400 if the distance is not valid
+     * @returns {*} 404 if the author is not found
+     * @returns {*} 404 if the location is not found
+     */
+    static getPostsByDistance = (req, res) => {
+        //TODO:
+    }
+
+    /**
      * Get all posts by author id
      * 
      * @param {*} req request object
