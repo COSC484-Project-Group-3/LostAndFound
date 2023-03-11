@@ -1,7 +1,7 @@
 import { MongoDB } from "./config/mongo.config.js";
 import express from 'express';
-import UserRoutes from './routes/users.route.js';
-import PostRoutes from './routes/posts.route.js';
+import UserRoutes from './routes/user.routes.js';
+import PostRoutes from './routes/post.routes.js';
 
 export class Server {
     app;

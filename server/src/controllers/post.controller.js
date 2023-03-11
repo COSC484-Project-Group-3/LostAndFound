@@ -18,7 +18,6 @@ export class PostController {
     /**
      * Get a post by id
      * 
-     * @param {*} id id of the post to get
      * @param {*} req request object
      * @param {*} res response object
      * @returns {*} the post
@@ -26,14 +25,13 @@ export class PostController {
      * @returns {*} 500 if there is an error
      * @returns {*} 400 if the id is not valid
      */
-    static getPost = (id, req, res) => {
+    static getPost = (req, res) => {
         //TODO:
     }
 
     /**
      * Get all posts by author id
      * 
-     * @param {*} authorId the id of the author of the posts to get
      * @param {*} req request object
      * @param {*} res response object
      * @returns {*} all posts by the author
@@ -41,13 +39,13 @@ export class PostController {
      * @returns {*} 500 if there is an error
      * @returns {*} 400 if the id is not valid
      */
-    static getPostsByAuthorId = (authorId, req, res) => {
+    static getPostsByAuthorId = (req, res) => {
         //TODO:
     }
 
     /**
      * Update a post by id
-     * @param {*} id the id of the post to update
+     * 
      * @param {*} req request object
      * @param {*} res response object
      * @returns {*} the updated post
@@ -55,21 +53,20 @@ export class PostController {
      * @returns {*} 500 if there is an error
      * @returns {*} 400 if the id is not valid
      */
-    static updatePost = (id, req, res) => {
+    static updatePost = (req, res) => {
         //TODO:
     }
 
     /**
      * Delete a post by id
      *
-     * @param {*} id the id of the post to delete
      * @param {*} req request object
      * @param {*} res response object
      * @returns {*} 404 if the post is not found
      * @returns {*} 500 if there is an error
      * @returns {*} 400 if the id is not valid
      */
-    static deletePost = (id, req, res) => {
+    static deletePost = (req, res) => {
         //TODO:
     }
 }
