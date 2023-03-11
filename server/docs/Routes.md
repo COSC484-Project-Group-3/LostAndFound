@@ -22,3 +22,13 @@
 | /api/posts/posts/:authorId | GET | Get all posts by a single user |
 | /api/posts/update/:id | PUT | Update a post with new info |
 | /api/posts/delete/:id | DELETE | Delete a post |
+
+## Location Routes
+
+| Route | HTTP Verb | Description |
+|-------|-----------|-------------|
+| /api/locations/create | POST | Create a new location |
+| /api/locations/location/:id | GET | Get a single location |
+| /api/locations/locations | GET | Get all locations |
+| /api/locations/update/:id | PUT | Update a location with new info |
+| /api/locations/delete/:id | DELETE | Delete a location |
