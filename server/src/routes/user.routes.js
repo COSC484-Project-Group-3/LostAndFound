@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { UserController } from '../controllers/users.controller.js';
+import { UserController } from '../controllers/user.controller.js';
 
 const UserRoutes = Router();
 
@@ -28,10 +28,10 @@ UserRoutes.get('/user/:id', UserController.getUser);
 UserRoutes.put('/update/:id', UserController.updateUser);
 
 /**
- * @route PUT /api/users/delete/:id
+ * @route DELETE /api/users/delete/:id
  * @description Delete a user
  */
-UserRoutes.put('/delete/:id', UserController.deleteUser);
+UserRoutes.delete('/delete/:id', UserController.deleteUser);
 
 
 export default UserRoutes;

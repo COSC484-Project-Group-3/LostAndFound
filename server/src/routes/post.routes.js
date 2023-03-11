@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { PostController } from '../controllers/posts.controller.js';
+import { PostController } from '../controllers/post.controller.js';
 
 const PostRoutes = Router();
 
@@ -28,10 +28,10 @@ PostRoutes.get('/posts/:authorId', PostController.getPostsByAuthorId);
 PostRoutes.put('/update/:id', PostController.updatePost);
 
 /**
- * @route PUT /api/posts/delete/:id
+ * @route DELETE /api/posts/delete/:id
  * @description Delete a post
  */
-PostRoutes.put('/delete/:id', PostController.deletePost);
+PostRoutes.delete('/delete/:id', PostController.deletePost);
 
 
 export default PostRoutes;
