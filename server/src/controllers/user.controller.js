@@ -1,7 +1,6 @@
 import bcrypt from 'bcrypt';
 import User from '../models/user.model.js';
 import Post from '../models/post.model.js';
-import { LocationService } from '../utils/location-service.js';
 export class UserController {
 
     /**
