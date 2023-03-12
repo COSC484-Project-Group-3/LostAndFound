@@ -22,10 +22,10 @@ LocationRoutes.get('/locations', LocationController.getAllLocations);
 LocationRoutes.get('/location/:id', LocationController.getLocation);
 
 /**
- * @route PUT /api/locations/update/:id
+ * @route PATCH /api/locations/update/:id
  * @description Update a location
  */
-LocationRoutes.put('/update/:id', LocationController.updateLocation);
+LocationRoutes.patch('/update/:id', LocationController.updateLocation);
 
 /**
  * @route DELETE /api/locations/delete/:id

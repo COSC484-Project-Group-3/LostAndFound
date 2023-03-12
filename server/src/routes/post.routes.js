@@ -28,10 +28,10 @@ PostRoutes.get('/posts/:distance/:lat/:long', PostController.getPostsByDistance)
 PostRoutes.get('/posts/:authorId', PostController.getPostsByAuthorId);
 
 /**
- * @route PUT /api/posts/update/:id
+ * @route PATCH /api/posts/update/:id
  * @description Update a post
  */
-PostRoutes.put('/update/:id', PostController.updatePost);
+PostRoutes.patch('/update/:id', PostController.updatePost);
 
 /**
  * @route DELETE /api/posts/delete/:id
