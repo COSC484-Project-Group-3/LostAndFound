@@ -1,6 +1,7 @@
 import bcrypt from 'bcrypt';
 import User from '../models/user.model.js';
 import Post from '../models/post.model.js';
+import { LocationService } from '../utils/location-service.js';
 export class UserController {
 
     /**
@@ -47,11 +48,6 @@ export class UserController {
      * @returns {*} 500 if there is an error
      */
     static getAllUsers = (req, res) => {
-        //####################
-        // TESTING PURPOSES
-        console.log('getAllUsers called')
-        console.log(req)
-        //####################
         User.find((err, users) => {
             if (err) {
                 res.status(500).json({ message: err.message });

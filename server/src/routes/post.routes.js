@@ -16,10 +16,10 @@ PostRoutes.post('/create', PostController.createPost);
 PostRoutes.get('/post/:id', PostController.getPost);
 
 /**
- * @route GET /api/posts/posts/:distance/:lat/:long
+ * @route GET /api/posts/posts/in/:distance
  * @description Get all posts within a distance
  */
-PostRoutes.get('/posts/:distance/:lat/:long', PostController.getPostsByDistance);
+PostRoutes.get('/posts/in/:distance', PostController.getPostsByDistance);
 
 /**
  * @route GET /api/posts/posts/:authorId

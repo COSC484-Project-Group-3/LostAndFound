@@ -1,6 +1,6 @@
 import Post from '../models/post.model.js';
 import Location from '../models/location.model.js';
-import { DistanceCalculator } from '../utils/distance-calculator.js';
+import { LocationService } from '../utils/location-service.js';
 export class PostController {
 
     /**
@@ -70,12 +70,15 @@ export class PostController {
      * @returns {*} 400 if the distance is not valid
      * @returns {*} 404 if the post is not found
      */
-    static getPostsByDistance = (req, res) => {
+    static getPostsByDistance = async (req, res) => {
+        // get ip address of the user
+        const ip = LocationService.getIp(req);
+        const clientCoordinates = await LocationService.getLatLongFromIP(ip).then((data) => {return data;});
         // get all locations within the distance
         Location.find({}, (err, locations) => {
             const locationIdToDistance = new Map();
             locations.forEach(location => {
-                let distance = DistanceCalculator.getDistance(req.params.lat, req.params.long, location.latitude, location.longitude);
+                let distance = LocationService.getDistance(clientCoordinates.lat, clientCoordinates.lon, location.latitude, location.longitude);
                 if (distance <= req.params.distance) {
                     locationIdToDistance.set(location._id.toString(), distance);
                 }
