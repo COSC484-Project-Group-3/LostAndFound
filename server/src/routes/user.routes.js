@@ -22,10 +22,10 @@ UserRoutes.get('/users', UserController.getAllUsers);
 UserRoutes.get('/user/:id', UserController.getUser);
 
 /**
- * @route PUT /api/users/update/:id
+ * @route PATCH /api/users/update/:id
  * @description Update a user
  */
-UserRoutes.put('/update/:id', UserController.updateUser);
+UserRoutes.patch('/update/:id', UserController.updateUser);
 
 /**
  * @route DELETE /api/users/delete/:id

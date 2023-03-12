@@ -16,16 +16,22 @@ PostRoutes.post('/create', PostController.createPost);
 PostRoutes.get('/post/:id', PostController.getPost);
 
 /**
+ * @route GET /api/posts/posts/:distance/:lat/:long
+ * @description Get all posts within a distance
+ */
+PostRoutes.get('/posts/:distance/:lat/:long', PostController.getPostsByDistance);
+
+/**
  * @route GET /api/posts/posts/:authorId
  * @description Get all posts
  */
 PostRoutes.get('/posts/:authorId', PostController.getPostsByAuthorId);
 
 /**
- * @route PUT /api/posts/update/:id
+ * @route PATCH /api/posts/update/:id
  * @description Update a post
  */
-PostRoutes.put('/update/:id', PostController.updatePost);
+PostRoutes.patch('/update/:id', PostController.updatePost);
 
 /**
  * @route DELETE /api/posts/delete/:id
