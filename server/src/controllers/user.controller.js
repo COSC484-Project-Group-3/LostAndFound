@@ -47,6 +47,11 @@ export class UserController {
      * @returns {*} 500 if there is an error
      */
     static getAllUsers = (req, res) => {
+        //####################
+        // TESTING PURPOSES
+        console.log('getAllUsers called')
+        console.log(req)
+        //####################
         User.find((err, users) => {
             if (err) {
                 res.status(500).json({ message: err.message });
