@@ -32,7 +32,7 @@ export class UserController {
                     res.status(400).json({ message: err.message });
                     return;
                 }
-                res.status(200).json(user);
+                res.status(201).json(user);
             })
         }
         catch (err) {
