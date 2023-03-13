@@ -1,6 +1,7 @@
 import bcrypt from 'bcrypt';
 import User from '../models/user.model.js';
 import Post from '../models/post.model.js';
+import { identicon } from 'minidenticons'
 export class UserController {
 
     /**
@@ -17,14 +18,15 @@ export class UserController {
             // hash password
             const salt = bcrypt.genSaltSync(10);
             const hashedPassword = bcrypt.hashSync(req.body.password, salt);              
-
+            const profilePicture = identicon(req.body.username).replaceAll("\"", '\'');
             const user = new User({
                 fullName: req.body.fullName,
                 email: req.body.email,
                 username: req.body.username,
                 password: hashedPassword,
-                profilePicture: req.body.profilePicture,
+                profilePicture: profilePicture
             });
+
             user.save((err, user) => {
                 if (err) {
                     res.status(400).json({ message: err.message });
