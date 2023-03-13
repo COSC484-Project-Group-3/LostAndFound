@@ -18,7 +18,8 @@ export class UserController {
             // hash password
             const salt = bcrypt.genSaltSync(10);
             const hashedPassword = bcrypt.hashSync(req.body.password, salt);              
-            const profilePicture = identicon(req.body.username).replaceAll("\"", '\'');
+            let profilePicture = identicon(req.body.username);
+            profilePicture = profilePicture.replaceAll("\"", '\'');
             const user = new User({
                 fullName: req.body.fullName,
                 email: req.body.email,
