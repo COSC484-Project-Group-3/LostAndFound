@@ -1,5 +1,6 @@
 import { MongoDB } from "./config/mongo.config.js";
 import express from 'express';
+import cors from 'cors';
 import UserRoutes from './routes/user.routes.js';
 import PostRoutes from './routes/post.routes.js';
 import LocationRoutes from './routes/location.routes.js';
@@ -35,6 +36,7 @@ export class Server {
     // set middleware
     static middleware() {
         this.app.use(express.json());
+        this.app.use(cors());
     }
 
     // listen
