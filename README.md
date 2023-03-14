@@ -22,7 +22,7 @@ Install server dependencies
   npm install
 ```
 
-Add server environment variables
+Add server environment variables in `server` folder
 | Mac/Linux | Windows |
 | --- | --- |
 | `touch .env` | ` type  nul > .env` |
