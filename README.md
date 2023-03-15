@@ -27,9 +27,42 @@ Add server environment variables
 | --- | --- |
 | `touch .env` | ` type  nul > .env` |
 
-Add required environment variables from [.env.example](https://github.com/COSC484-Project-Group-3/LostAndFound/blob/main/server/.env.example) to `.env`.
+Add required environment variables from [.env.example](https://github.com/COSC484-Project-Group-3/LostAndFound/blob/main/server/.env.example) to `.env`.\
+
+```bash
+MONGO_URI=
+PORT=
+```
 
 Run the server
+```bash
+  npm start
+```
+
+Install client dependencies
+```bash
+  cd LostAndFound/client
+  npm install
+```
+
+Add server environment variables in `client` folder
+```bash
+  cd client
+```
+
+| Mac/Linux | Windows |
+| --- | --- |
+| `touch .env` | ` type  nul > .env` |
+
+Add required environment variables from [.env.example](https://github.com/COSC484-Project-Group-3/LostAndFound/blob/main/client/.env.example) to `.env`.
+
+```bash
+REACT_APP_API_URL=
+REACT_APP_GOOGLE_CLIENT_ID=
+REACT_APP_GOOGLE_CLIENT_SECRET=
+```
+
+Run the client
 ```bash
   npm start
 ```
