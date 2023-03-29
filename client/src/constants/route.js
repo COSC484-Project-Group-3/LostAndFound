@@ -9,5 +9,8 @@ export const USER_ROUTES = {
     },
     GET_USER(id) {
         return `${API_URL}/api/users/user/${id}`;
+    },
+    LOGIN_USER() {
+        return `${API_URL}/api/users/login`;
     }
 };

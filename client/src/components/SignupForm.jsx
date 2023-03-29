@@ -30,7 +30,7 @@ const SignupForm = () => {
         try {
             const res = await AuthService.signup(user);
             if (res.status === 201) {
-                AuthService.setToken(res.data._id);
+                AuthService.setToken('id', res.data._id);
                 navigate('/');
             } else if (res.status === 400) {
                 setError(res.error);
@@ -61,6 +61,7 @@ const SignupForm = () => {
         <div className="signup-form-container">
             <form className="signup-form" onSubmit={signup({"email": email, "fullName": name, "username": username, "password": password})}>
                 <h2>Create your account</h2>
+                <label>Email</label>
                 <input
                     className="email"
                     type="email"
@@ -68,6 +69,7 @@ const SignupForm = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
+                <label>Name</label>
                 <input
                     className="name"
                     type="text"
@@ -75,6 +77,7 @@ const SignupForm = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
+                <label>Username</label>
                 <input
                     className="username"
                     type="text"
@@ -82,6 +85,7 @@ const SignupForm = () => {
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                 />
+                <label>Password</label>
                 <input
                     className="password"
                     type="password"

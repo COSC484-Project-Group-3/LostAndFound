@@ -13,6 +13,14 @@ export class AuthService {
         return await axios.post(USER_ROUTES.REGISTER_USER(), user);
     }
 
+    static async login(user) {
+        return await axios.post(USER_ROUTES.LOGIN_USER(), user);
+    }
+
+    static async getAllUsers() {
+        return await axios.post(USER_ROUTES.GET_USERS(), user);
+    }
+
     /**
      * Checks if a user is logged in
      * 
