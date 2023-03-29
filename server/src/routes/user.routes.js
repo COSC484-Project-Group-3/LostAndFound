@@ -10,6 +10,12 @@ const UserRoutes = Router();
 UserRoutes.post('/create', UserController.createUser);
 
 /**
+ * @route POST /api/users/login
+ * @description Login a user
+ */
+UserRoutes.post('/login', UserController.loginUser)
+
+/**
  * @route GET /api/users/users
  * @description Get all users
  */

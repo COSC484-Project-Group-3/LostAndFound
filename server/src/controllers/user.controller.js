@@ -139,4 +139,40 @@ export class UserController {
             res.status(200).json({ message: 'User deleted successfully' });
         });
     }
+
+    /**
+     * Gets a user
+     * 
+     * @param {*} req request object
+     * @param {*} res response object
+     * @returns {*} all users
+     * @returns {*} 500 if there is an error
+     */
+    static async loginUser(req, res) {
+        try {
+            if (!req.body.username && !req.body.email) {
+                res.status(400).json({ message: 'Username or email is required.' });
+                return;
+            }
+            if (!req.body.password) {
+                res.status(400).json({ message: 'Password is required.' });
+                return;
+            }
+            const user = await User.findOne({ $or: [{ username: req.body.username }, { email: req.body.email }] });
+            if (!user) {
+                res.status(400).json({ message: 'User not found.' });
+                return;
+            }
+            const validPassword = bcrypt.compareSync(req.body.password, user.password);
+            if (!validPassword) {
+                res.status(400).json({ message: 'Invalid password.' });
+                return;
+            }
+            user.password = undefined;
+            res.status(200).json(user);
+        }
+        catch (err) {
+            res.status(500).json({ message: err.message });
+        }
+    }
 }
