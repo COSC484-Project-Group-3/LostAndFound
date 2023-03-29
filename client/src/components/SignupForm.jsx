@@ -96,7 +96,7 @@ const SignupForm = () => {
                 <input className='native-signup' type="submit" value="Sign up" />
                 {error && <p>{error}</p>}
             </form>
-            <p className="login-link-container">Already have an account? <a className="login-link">Login</a></p>
+            <p className="login-link-container">Already have an account? <a href="https://lostandfound-aani.onrender.com/login" className="login-link">Login</a></p>
             <hr className="signup-break"/>
             <GoogleLogin onSuccess={onSuccess} onError={onError}/>
         </div>

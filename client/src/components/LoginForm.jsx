@@ -62,7 +62,7 @@ const LoginForm = () => {
         />
         <input className="native-signin" type="submit" value="Login"/>
       </form>
-      <p className="signup-link-container">Don't have an account? <a className="signup-link">Signup</a></p>
+      <p className="signup-link-container">Don't have an account? <a href="https://lostandfound-aani.onrender.com/signup" className="signup-link">Signup</a></p>
       <hr className="login-break"/>
         <GoogleLogin onSuccess={onSuccess} onError={onError}/>
     </div>
