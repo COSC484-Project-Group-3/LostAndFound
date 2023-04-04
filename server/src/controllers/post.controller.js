@@ -1,4 +1,5 @@
 import Post from '../models/post.model.js';
+import User from '../models/user.model.js';
 import Location from '../models/location.model.js';
 import { LocationService } from '../utils/location-service.js';
 export class PostController {
@@ -14,6 +15,21 @@ export class PostController {
      */
     static createPost = async (req, res) => {
         try {
+            const contactInfo = req.body.contactInfo;
+            if (!contactInfo) {
+                res.status(400).json({ message: 'Contact info is required' });
+                return;
+            }
+            User.updateOne({ _id: req.body.author }, { $set: { contactInfo: contactInfo } }, (err, user) => {
+                if (err) {
+                    res.status(500).json({ message: err.message });
+                    return;
+                } else if (!user) {
+                    res.status(404).json({ message: 'User not found' });
+                    return;
+                }
+            });
+
             const post = new Post({
                 author: req.body.author,
                 title: req.body.title,
@@ -57,6 +73,32 @@ export class PostController {
                     return;
                 }
                 res.status(200).json(post);
+            });
+    }
+
+    /**
+     * Get all posts
+     * 
+     * @param {*} req request object
+     * @param {*} res response object
+     * @returns {*} all posts
+     * @returns {*} 500 if there is an error
+     */
+    static getPosts = async (req, res) => {
+        // get ip address of the user
+        const ip = LocationService.getIp(req);
+        const clientCoordinates = await LocationService.getLatLongFromIP(ip).then((data) => {return data;});
+        // get all posts
+        Post.find({})
+            .populate('author')
+            .populate('location')
+            .exec((err, posts) => {
+                if (err) {
+                    res.status(500).json({ message: err.message });
+                    return;
+                }
+                // return posts and client coordinates
+                res.status(200).json({ posts: posts, clientCoordinates: clientCoordinates });
             });
     }
 

@@ -20,6 +20,7 @@
 | /api/posts/post/:id | GET | Get a single post |
 | /api/posts/posts/in/:distance | GET | Get all posts within a certain distance of a location |
 | /api/posts/posts/:authorId | GET | Get all posts by a single user |
+| /api/posts/posts | GET | Get all posts |
 | /api/posts/update/:id | PATCH | Update a post with new info |
 | /api/posts/delete/:id | DELETE | Delete a post |
 
