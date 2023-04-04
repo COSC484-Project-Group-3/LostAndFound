@@ -22,6 +22,12 @@ PostRoutes.get('/post/:id', PostController.getPost);
 PostRoutes.get('/posts/in/:distance', PostController.getPostsByDistance);
 
 /**
+ * @route GET /api/posts/posts
+ * @description Get all posts
+ */
+PostRoutes.get('/posts', PostController.getPosts);
+
+/**
  * @route GET /api/posts/posts/:authorId
  * @description Get all posts
  */
