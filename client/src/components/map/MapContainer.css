@@ -1,0 +1,126 @@
+.map-container {
+    width: 100vw;
+    height: 100%;
+    margin-top: 50px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 1;
+    max-width: 1440px;
+}
+
+/* marker  */
+.map-marker-btn {
+    width: fit-content;
+    height: fit-content;
+    background-color: #fff;
+    border: 1px solid #444655;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+}
+.map-marker-btn:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+.map-marker-popup {
+    width: 200px;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 2px;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    z-index: 1;
+}
+.map-popup {
+    width: fit-content;
+    padding: 0px;
+    z-index: 1;
+}
+.mapboxgl-popup-content {
+    padding: 0px;
+    z-index: 1;
+    /* transparent */
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+.mapboxgl-popup-close-button {
+    /* absolute top right */
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0px;
+    margin: 0px;
+    z-index: 1;
+    margin: 15px;
+    padding: 2px 5px 2px;
+    border-radius: 4px;
+    background-color: #db0b00;
+    color: #fff;
+}
+.mapboxgl-popup-close-button:focus, .mapboxgl-popup-close-button:hover {
+    outline: none;
+    background-color: #db0b00;
+    color: #fff;
+}
+/* show List  */
+.show-list-button-container {
+    position: fixed;
+    bottom: 100px;
+    width: fit-content;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5b8df7;
+    padding: 5px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 0.3s ease;
+}
+.show-list-button-container:hover {
+    transform: translateX(-50%) scale(1.1);
+    transition: all 0.3s ease;
+}
+.show-list-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+}
+.show-list-text {
+    font-size: 14px;
+    color: #fff;
+    margin: 8px;
+    margin-right: 10px;
+}
+.satellite-style {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    margin-top: 100px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 4px;
+}
+.satellite-style:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}

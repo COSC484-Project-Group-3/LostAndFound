@@ -1,13 +1,12 @@
-import Header from "../components/Header";
-import LoginForm from "../components/LoginForm";
+import Header from "../components/header/Header";
+import LoginForm from "../components/forms/LoginForm";
 import { AuthService } from '../services/auth.service';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const Login = () => {
     const navigate = useNavigate();
-
-    // if user is not logged in, redirect to home page
+    // if user is logged in, redirect to home page
     useEffect(() => {
         if (AuthService.isLoggedIn()) {
             navigate('/');

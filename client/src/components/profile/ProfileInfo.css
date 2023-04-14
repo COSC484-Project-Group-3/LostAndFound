@@ -1,0 +1,30 @@
+
+.profile-info-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    justify-content: left;
+    margin: 80px auto;
+}
+.profile-img-container, .profile-info-name, .profile-info-username {
+    padding-left: 20px;
+}
+.profile-info-name p {
+    padding-left: 10px;
+    margin: 0;
+    margin-top: 5px;
+}
+.profile-info-username p {
+    padding-left: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #7a7979;
+    margin: 0;
+    margin-top: 2px;
+}
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #e6e6e6;
+}
