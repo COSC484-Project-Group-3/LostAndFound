@@ -22,6 +22,16 @@ export class AuthService {
     }
 
     /**
+     * Logs in a user
+     * 
+     * @param {Object} id the user object to be sent to the server
+     * @returns {Promise} the response from the server
+     */
+    static async getUser(id) {
+        return await axios.get(USER_ROUTES.GET_USER(id));
+    }
+
+    /**
      * Checks if a user is logged in
      * 
      * @returns {Boolean} true if the user is logged in, false otherwise
@@ -53,5 +63,22 @@ export class AuthService {
      */
     static setToken(name, token) {
         localStorage.setItem(name, token);
+    }
+
+    /**
+     * Removes the token from the local storage
+     * 
+     * @param {String} name the name of the token to be removed
+     * @returns {String} the token that was removed from the local storage
+     * @throws {Error} if the token does not exist
+     */
+    static removeToken(name) {
+        const token = this.getToken(name);
+        if (token !== null) {
+            localStorage.removeItem(name);
+            return token;
+        } else {
+            throw new Error("Token does not exist");
+        }
     }
 }

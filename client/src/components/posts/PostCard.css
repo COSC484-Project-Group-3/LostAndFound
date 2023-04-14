@@ -1,0 +1,64 @@
+/* POST CARD */
+.post-card {
+    box-sizing: border-box;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform .1s;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .3s;
+    background-color: #fff;
+}
+.post-card-img-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+.post-card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.post-card:hover {
+    /* hover annimation  */
+    box-shadow: #5b8df7  0px 1px 2px 0px, #5b8df7 0px 1px 3px 1px;
+    transition: all .3s;
+}
+.post-card-compensation-container, .post-card-distance-container, .post-card-title-container {
+    
+    height: fit-content;
+}
+.post-card-title, .post-card-compensation, .post-card-distance {
+    margin: 0;
+    margin-left: 10px;
+}
+.post-card-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 15px;
+    margin-top: 5px;
+
+}
+.post-card-compensation, .post-card-title {
+    font-weight: 500;
+}
+.post-card-compensation {
+    font-size: 14px;
+}
+.post-card-distance {
+    font-size: 13px;
+    color: #626371;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width:600px) {
+    .post-card {
+        width:100%;
+        margin: 0 0 10px 0;
+    }
+}

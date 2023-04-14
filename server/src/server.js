@@ -42,6 +42,10 @@ export class Server {
     // listen
     static async listen() {
         this.app.listen(this.app.get('port'));
+        // api gateway
+        this.app.get('/', (req, res) => {
+            res.json({ message: 'Welcome to Lost And Found Api.' });
+        });
         console.log('SERVER RUNNING ON PORT ', this.app.get('port'));
     }
 }
