@@ -23,7 +23,7 @@ const MapContainer = (props) => {
         longitude: -76.609825,
         width: "100%",
         height: "100%",
-        zoom: 14,
+        zoom: 13,
     });
     
     useEffect(() => {
@@ -44,7 +44,7 @@ const MapContainer = (props) => {
                 longitude: res.data.clientCoordinates.lon,
                 width: "100%",
                 height: "100%",
-                zoom: 14,
+                zoom: 13,
             });
         } catch (err) {
             console.log(err);
