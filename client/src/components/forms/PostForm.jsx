@@ -161,7 +161,7 @@ const PostForm = () => {
                 <form className="post-form" onSubmit={handleSubmit} method="POST">
                     <CloseIcon className="close-button" variant="contained" color="primary" onClick={formClose}/>
                     <p className="post-form-header">Post your lost item</p>
-                    <label className="title-label" htmlFor="title">Title</label>
+                    <label className="title-label" htmlFor="title">Name</label>
                     <input 
                         className="title"
                         type="text"
@@ -224,8 +224,8 @@ const PostForm = () => {
                         }}
                     >
                     </input>
-                    <label className="compensation-label" htmlFor="compensation">Compensation</label>
-                    <div><p className="compensation-info">Please specify how  much money you are willing to pay for the finder.</p></div>
+                    <label className="compensation-label" htmlFor="compensation">Reward</label>
+                    <div><p className="compensation-info">Please specify how  much money you are willing to reward for the finder.</p></div>
                     <input
                         className="compensation"
                         type="number"

@@ -66,17 +66,13 @@
     display: flex;
     max-width: 1200px;
     width: 80%;
-    margin: 0 auto;
+    margin: 10px auto;
     height: auto;
     border: #ccc 1px solid;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-                rgba(0, 0, 0, 0.12) 0px -12px 30px, 
-                rgba(0, 0, 0, 0.12) 0px 4px 6px, 
-                rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #f6f8ff;
+    background-color: #ffffff;
     max-height: calc(100% - 50px);
     overflow: auto;
     border-radius: 4px;
