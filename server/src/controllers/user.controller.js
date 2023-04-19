@@ -17,14 +17,17 @@ export class UserController {
         try {
             // hash password
             const salt = bcrypt.genSaltSync(10);
-            const hashedPassword = bcrypt.hashSync(req.body.password, salt);              
-            const profilePicture = identicon(req.body.username);
+            const hashedPassword = bcrypt.hashSync(req.body.password, salt);
+            if (!req.body.profilePicture) {
+                const profilePicture = identicon(req.body.username);
+                req.body.profilePicture = profilePicture;
+            }
             const user = new User({
                 fullName: req.body.fullName,
                 email: req.body.email,
                 username: req.body.username,
                 password: hashedPassword,
-                profilePicture: profilePicture
+                profilePicture: req.body.profilePicture
             });
 
             user.save((err, user) => {

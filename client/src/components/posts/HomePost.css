@@ -1,0 +1,295 @@
+/* HOME MAIN CONTAINER */
+.home-main-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+/* DISTANCE SELECTOR  */
+.posts-options-selector {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+}
+.distance-selector {
+    width: fit-content;
+}
+.distance-selector-label {
+    font-size: 14px;
+    font-weight: 500;
+}
+.distance-selector {
+    border: 1px solid #444655;
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 5px;
+    color: #444655;
+    -webkit-appearance: none;
+    appearance: none;
+    text-align: center;
+}
+.distance-selector:focus, .distance-selector:hover {
+   outline: none;
+   cursor: pointer;
+}
+
+/* HOME POSTS CONTAINER */
+.home-posts-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 0;
+    margin: 0 auto;
+    min-width: fit-content;
+    
+}
+
+
+/* POST PREVIEW */
+.home-post-author-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 5px;
+    border: #ccc 1px solid;
+}
+.author-info {
+    display: flex;
+    margin:0 0 5px;
+    align-items: center;
+}
+.post-preview-container {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    max-width: 1200px;
+    width: 80%;
+    margin: 10px auto;
+    height: auto;
+    border: #ccc 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    max-height: calc(100% - 50px);
+    overflow: auto;
+    border-radius: 4px;
+    top: 50px;
+    bottom: auto;
+}
+.post-preview-close-container {
+    position: fixed;
+    left: 97%;
+    top: 15px;
+    transform:translate(-50%, -50%);
+    z-index:1;
+    margin-top: 30px;
+    background-color: #db0b00;
+    border-radius: 10%;
+    padding: 1px 5px 1px;
+}
+.preview-close-button {
+    cursor: pointer;
+}
+.post-preview-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin-right: 20px;
+}
+.post-preview-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.post-preview-info-container {
+    width: 40%;
+    padding: 10px;
+    margin: 20px 20px 0px 0px;
+}
+.preview-profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 0px;;
+}
+.preview-username {
+    padding-left: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0px;
+}
+.post-preview-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post-preview-title {
+    font-size: 18px;
+    padding: 0px;
+    margin: 5px 0px 5px;
+}
+.post-preview-compensation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post-preview-compensation {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 5px 0px 5px;
+}
+.post-preview-description {
+    font-weight: 400;
+    color: #626371;
+    margin: 0px;
+    word-wrap: break-word;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+
+}
+.location-description {
+    font-weight: 400;
+    font-size: 15px;
+    color: #626371;
+    margin: 0px;
+    word-wrap: break-word;
+    padding-right: 10px;
+    margin-bottom: 10px;
+}
+.post-preview-location-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+    border-radius: 4px;
+}
+
+.iframe {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    border: 1px solid #5b8df7;
+    margin: 0 auto;
+}
+.call-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.call-button {
+    border: #5b8df7 solid 1px;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    width: 100%;
+    color: #5b8df7;
+    text-align: center;
+    background-color: #5b8cf721;
+}
+.call-button:hover {
+    background-color: #5b8cf756;
+    transition: all 0.3s ease;
+}
+
+.navigate-map-button-container {
+    position: fixed;
+    bottom: 50px;
+    width: fit-content;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5b8df7;
+    padding: 5px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: all 0.3s ease;
+}
+.navigate-map-button-container:hover {
+    /* scale up */
+    transform: translateX(-50%) scale(1.1);
+
+    transition: all 0.3s ease;
+}
+.navigate-map-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none !important;
+}
+
+.map-button-text {
+    font-size: 14px;
+    color: #fff;
+    margin: 8px;
+    margin-right: 10px;
+}
+/* RESPONSIVE */
+@media screen and (max-width: 1160px) {
+    .post-preview-container {
+        display: inline-block;
+        top: 50px;
+        padding: 0;
+        width: 95%;
+        max-width: 100%;
+        overflow-x: hidden;
+        bottom: auto;
+    }
+    .post-preview-close-container {
+        left: 94%;
+        margin-top: 10px;
+    }
+    .post-preview-location-container {
+        padding-right: 20px;
+    }
+    .post-preview-info-container {
+        width: 100%;
+        margin-top: 0;
+        padding-right: 0;
+    }
+    .post-preview-img-container {
+        width: 100%;
+        margin-right: 0;
+        margin: 0;
+    }
+    .post-preview-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .call-button-container {
+        margin-right: 20px;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width:600px) {
+    .home-post {
+        width: 100%;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .posts-options-selector {
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width: 930px) {
+    .home-posts-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+@media screen and (max-width: 274px) {
+    .home-posts-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}

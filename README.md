@@ -60,6 +60,7 @@ Add required environment variables from [.env.example](https://github.com/COSC48
 REACT_APP_API_URL=
 REACT_APP_GOOGLE_CLIENT_ID=
 REACT_APP_GOOGLE_CLIENT_SECRET=
+REACT_APP_MAPBOX_TOKEN=
 ```
 
 Run the client

@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import ProfileForm from "../components/ProfileForm";
+import ProfileInfo from "../components/ProfileInfo";
 import { AuthService } from '../services/auth.service';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -17,7 +17,7 @@ const Login = () => {
     return (
         <div className="profile">
             <Header />
-            <ProfileForm /> 
+            <ProfileInfo /> 
         </div>
     );
 };
