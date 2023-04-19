@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import LoginForm from "../components/LoginForm";
+import ProfileForm from "../components/ProfileForm";
 import { AuthService } from '../services/auth.service';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -15,11 +15,11 @@ const Login = () => {
     }, []);
 
     return (
-        <div className="login">
+        <div className="profile">
             <Header />
-            <LoginForm />
+            <ProfileForm /> 
         </div>
     );
 };
 
-export default Login;
+export default Profile;
