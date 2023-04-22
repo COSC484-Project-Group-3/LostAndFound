@@ -28,3 +28,17 @@
     border-radius: 50%;
     border: 1px solid #e6e6e6;
 }
+.profile-info-posts {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.lost-items-header {
+    padding-left: 5em ;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+}

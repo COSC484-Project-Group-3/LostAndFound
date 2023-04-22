@@ -1,15 +1,15 @@
-import Header from "../components/Header";
-import ProfileInfo from "../components/ProfileInfo";
+import Header from "../components/header/Header";
+import ProfileInfo from "../components/profile/ProfileInfo";
 import { AuthService } from '../services/auth.service';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
-const Login = () => {
+const Profile = () => {
     const navigate = useNavigate();
 
     // if user is  logged in, redirect to home page
     useEffect(() => {
-        if (AuthService.isLoggedIn()) {
+        if (!AuthService.isLoggedIn()) {
             navigate('/');
         }
     }, []);
