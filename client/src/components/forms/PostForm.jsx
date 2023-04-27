@@ -96,7 +96,7 @@ const PostForm = () => {
             // create a post
             await PostService.createPost(postObj).then((res) => {
                 // check if the post was created
-                if (res.status === 200) {
+                if (res.status === 201) {
                     navigate("/");
                 } else {
                     setError(true);

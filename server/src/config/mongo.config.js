@@ -23,4 +23,13 @@ export class MongoDB {
             console.log("SUCCESSFULLY CONNECTED TO DATABASE");
         });
     }
+
+    /**
+     * A function to disconnect from the database
+     * 
+     */
+    static async disconnect() {
+        await mongoose.disconnect();
+        console.log("SUCCESSFULLY DISCONNECTED FROM DATABASE");
+    }
 }

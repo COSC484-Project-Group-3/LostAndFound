@@ -63,6 +63,11 @@ REACT_APP_GOOGLE_CLIENT_SECRET=
 REACT_APP_MAPBOX_TOKEN=
 ```
 
+OPTIONAL: Test the server
+```bash
+  npm test
+```
+
 Run the client
 ```bash
   npm start
