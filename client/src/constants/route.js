@@ -25,11 +25,14 @@ export const POST_ROUTES = {
     GET_POSTS_BY_ID(id) {
         return `${API_URL}/api/posts/post/${id}`;
     },
-    Get_POSTS_BY_USER(userId) {
+    GET_POSTS_BY_USER(userId) {
         return `${API_URL}/api/posts/posts/${userId}`;
     },
     GET_ALL_POSTS() {
         return `${API_URL}/api/posts/posts`;
+    },
+    DELETE_POST(postId) {
+        return `${API_URL}/api/posts/delete/${postId}`
     }
 };
 

@@ -88,4 +88,14 @@ export class PostService {
         }
         return "just now";
     }
+
+    /**
+     * A function to delete a post
+     * 
+     * @param {*} post a post id to be delete
+     */
+        static async deletePost(postId) {
+            return await axios.delete(POST_ROUTES.DELETE_POST(postId));
+    }
+
 }

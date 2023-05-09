@@ -27,7 +27,7 @@ Add server environment variables in `server` folder
 | --- | --- |
 | `touch .env` | ` type  nul > .env` |
 
-Add required environment variables from [.env.example](https://github.com/COSC484-Project-Group-3/LostAndFound/blob/main/server/.env.example) to `.env`.\
+Add required environment variables from [.env.example](https://github.com/COSC484-Project-Group-3/LostAndFound/blob/main/server/.env.example) to `.env`.
 
 ```bash
 MONGO_URI=
@@ -45,7 +45,7 @@ Install client dependencies
   npm install
 ```
 
-Add server environment variables in `client` folder
+Add client environment variables in `client` folder
 ```bash
   cd client
 ```

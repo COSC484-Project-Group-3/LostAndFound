@@ -1,47 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-.profile-info-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    justify-content: left;
-    margin: 80px auto;
-}
-.profile-img-container, .profile-info-name, .profile-info-username {
-    padding-left: 20px;
-}
-.profile-info-name p {
-    padding-left: 10px;
-    margin: 0;
-    margin-top: 5px;
-}
-.profile-info-username p {
-    padding-left: 10px;
-    font-weight: 400;
-    font-size: 12px;
-    color: #7a7979;
-    margin: 0;
-    margin-top: 2px;
-}
-.profile-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 1px solid #e6e6e6;
-}
-.profile-info-posts {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    margin-top: 20px;
-    padding-left: 20px;
-}
-.lost-items-header {
-    padding-left: 5em ;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0;
-    margin-bottom: 10px;
-}
+
 .profile-form-container {
     max-width: 700px;
     margin: 0 auto;
