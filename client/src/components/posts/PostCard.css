@@ -55,9 +55,11 @@
     margin-bottom: 5px;
 }
 
+
 @media screen and (max-width:600px) {
     .post-card {
         width:100%;
         margin: 0 0 10px 0;
     }
 }
+
