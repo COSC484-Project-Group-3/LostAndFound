@@ -1,5 +1,6 @@
 import Header from "../components/header/Header";
 import ProfileInfo from "../components/profile/ProfileInfo";
+import Footer from "../components/footer/Footer";
 import { AuthService } from '../services/auth.service';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -7,7 +8,7 @@ import { useEffect } from 'react';
 const Profile = () => {
     const navigate = useNavigate();
 
-    // if user is  logged in, redirect to home page
+    // if user is not logged in, redirect to home page
     useEffect(() => {
         if (!AuthService.isLoggedIn()) {
             navigate('/');
@@ -17,7 +18,8 @@ const Profile = () => {
     return (
         <div className="profile">
             <Header />
-            <ProfileInfo /> 
+            <ProfileInfo />
+            <Footer/>
         </div>
     );
 };
