@@ -1,0 +1,41 @@
+.footer {
+    background-color: #f0f0f0;
+    padding: 20px;
+    
+  }
+  
+  .footer__container {
+    display: block;
+    justify-content: space-between;
+  }
+  
+  .footer__item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer__icon {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  .footer__icon1,.footer__textp{
+    text-align: right;
+    display: contents;
+  }
+  
+  .footer__link {
+    color: #000;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .footer__text {
+    font-size: 14px;
+  }
+  footer_textp{
+    font-size:14px;
+    display: block;
+
+  }
+  
