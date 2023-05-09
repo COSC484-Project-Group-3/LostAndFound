@@ -3,6 +3,7 @@ import SignupForm from '../components/forms/SignupForm';
 import { AuthService } from '../services/auth.service';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import Footer from "../components/footer/Footer";
 
 const Signup = () => {
     const navigate = useNavigate();
@@ -27,6 +28,7 @@ const Signup = () => {
         <div className="signup">
             <Header />
             <SignupForm  />
+            <Footer/>
         </div>
     );
 };

@@ -3,7 +3,7 @@ import HomePost from "../components/posts/HomePost";
 import { AuthService } from '../services/auth.service';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-
+import Footer from "../components/footer/Footer";
 const Home = () => {
     const navigate = useNavigate();
 
@@ -24,7 +24,9 @@ const Home = () => {
                     }
                 }
             `}</style>
+            <Footer/>
         </div>
+
     );
 }
 
