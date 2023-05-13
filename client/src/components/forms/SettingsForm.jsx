@@ -31,12 +31,29 @@ const SettingsForm = () => {
             }
         }
     };
-
+    const handleUpdateProfile = (e) => {
+      e.preventDefault();
+    }
   return (
-    <div className="settings-form">
-        <h1>Settings</h1>
+    <div>       
+          <h1>Settings</h1>
+          <form onSubmit={handleUpdateProfile}>
+            <label htmlFor="username">Username</label>
+            <input type="text" id="username" name="username" defaultValue={user.username} />
+            <br />
+            <label htmlFor="profilename">Profilename</label>
+            <input type="text" id="profilename" name="profilename" defaultValue={user.profilename} />
+            <br />
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" name="email" defaultValue={user.email} />
+            <br />
+            <button type="submit">Save</button>
+          </form>
     </div>
   )
+};
+
+export default SettingsForm;
 };
 
 export default SettingsForm;
