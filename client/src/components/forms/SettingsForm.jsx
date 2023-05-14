@@ -21,7 +21,7 @@ const SettingsForm = () => {
     }
 
     const getUserInfo = async () => {
-        const token = AuthService.isLoggedIn("id");
+        const token = AuthService.getToken("id")
         if (token) {
             try {
                 const user = await AuthService.getUser(token);
@@ -48,7 +48,10 @@ const SettingsForm = () => {
             <label htmlFor="email">Email</label>
             <input type="email" id="email" name="email" defaultValue={user.email} />
             <br />
-            <input type="submit">Save</input>
+            <label htmlFor="password">Password</label>
+            <input type="password" id="password" name="password" defaultValue={user.password} />
+            <br />
+            <input type="submit" value="Save" />
           </form>
     </div>
   )
