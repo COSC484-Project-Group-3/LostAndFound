@@ -37,6 +37,7 @@ const SettingsForm = () => {
   return (
     <div>       
           <h1>Settings</h1>
+          <h2> update your profile </h2>
           <form onSubmit={handleUpdateProfile}>
             <label htmlFor="username">Username</label>
             <input type="text" id="username" name="username" defaultValue={user.username} />
@@ -47,13 +48,10 @@ const SettingsForm = () => {
             <label htmlFor="email">Email</label>
             <input type="email" id="email" name="email" defaultValue={user.email} />
             <br />
-            <button type="submit">Save</button>
+            <input type="submit">Save</input>
           </form>
     </div>
   )
-};
-
-export default SettingsForm;
 };
 
 export default SettingsForm;
