@@ -90,6 +90,15 @@ export class PostService {
     }
 
     /**
+     * A function to update a post
+     * @param {*} post a post object to be updated to
+     * @param {Number} postId a post id to be updated 
+     */
+    static async updatePost(post, postId) {
+        return await axios.patch(POST_ROUTES.UPDATE_POST(postId), post)
+    }
+
+    /**
      * A function to delete a post
      * 
      * @param {*} post a post id to be delete
