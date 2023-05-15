@@ -1,0 +1,155 @@
+.update-post-form {
+    margin: 60px auto;
+}
+/* POST FORM */
+.post-form {
+    width: 400px;
+    height: auto;
+    margin: 60px auto;
+    max-width: fit-content;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.post-form-header {
+    font-weight: 500;
+    text-align: center;
+    padding-left: 24px;
+}
+ .title, .description, .native-post, .image, .location, .phone, .compensation {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    outline: none;
+    -webkit-border: 1px solid  #5b8df7;
+    border: 1px solid  #5b8df7;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-tap-highlight-color: transparent;
+    color: #444655;
+ }
+ .title:focus, .description:focus, .image:focus, .location:focus,.phone:focus, .compensation:focus {
+    transition: all 0.2s ease;
+    background-color: #f6f8ff;
+}
+.close-button {
+    margin-top: 5px;
+    float: right;
+    cursor: pointer;
+    color: #5b8df7;
+}
+.close-button:hover, .close-button:focus {
+    background: #5b8df7;
+    color: #ffffff;
+    transition: all 0.2s ease;
+}
+.title-label, .description-label, .image-label, .location-label, .phone-label, .compensation-label, .error {
+    font-size: 13px;
+    font-weight: 500;
+    color: #626371;
+}
+.native-post {
+    margin-top: 20px;
+    padding: 15px;
+    color: #5b8df7;
+    background-color: #5b8cf721;
+    border: #5b8df7 solid 1px;
+    cursor: pointer;
+    font-weight: 600;
+    -webkit-appearance: none;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    appearance: none;
+    margin-bottom: 40px;
+}
+.native-post:hover, .native-post:focus {
+    background-color: #5b8cf756;
+    transition: all 0.3s ease;
+}
+.image-preview-container {
+    margin: 5px 0 10px;
+    width: fit-content;
+    border: 1px solid  #e0e1e1;
+    -webkit-appearance: none;
+    appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.error-container {
+    width: fit-content;
+    height: auto;
+    background-color: #ff6e6e2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.error {
+    margin: 0;
+    padding: 10px;
+}
+.compensation-info,.phone-info, .location-info, .image {
+    font-size: 12px;
+    color: #626371;
+    margin-top: 0px;
+}
+
+/* LOADING */
+.post-loading {
+    padding: 10px;
+    border: 2px solid #5b8df7;
+    border-radius: 50%;
+    border-top: 2px solid #ffffff;
+    width: 5px;
+    height: 5px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+    display: block;
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+/* RESPONSIVE */
+@media screen and (max-width: 870px) {
+    .post-form {
+        width: 85%;
+    }
+}
+
+/* POST BUTTON TO OPEN FORM */
+.invalid-post--container {
+    position: fixed;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.post-button {
+    background-color: #333541;
+    padding: 5px;
+    padding-left: 7px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 90%;
+    left:90%;
+    z-index: 999;
+}

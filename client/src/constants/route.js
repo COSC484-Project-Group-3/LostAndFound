@@ -31,6 +31,9 @@ export const POST_ROUTES = {
     GET_ALL_POSTS() {
         return `${API_URL}/api/posts/posts`;
     },
+    UPDATE_POST(postId) {
+        return `${API_URL}/api/posts/update/${postId}`
+    },
     DELETE_POST(postId) {
         return `${API_URL}/api/posts/delete/${postId}`
     }

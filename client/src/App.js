@@ -11,6 +11,7 @@ import About from "./pages/About";
 import ChangePassword from "./pages/ChangePassword";
 import { Switch } from "@mui/material";
 import NotFound from "./pages/NotFound";
+import UpdatePost from "./pages/UpdatePost";
 const App = () => {
   return (
     <BrowserRouter>
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/post" element={<Post/>}></Route>
         <Route path="/changePassword" element={<ChangePassword/>}></Route>
         <Route path="/about" element={<About/>}></Route>
+        <Route path="/updatepost" element={<UpdatePost/>}></Route>
         <Route path="*" element={<NotFound/>}></Route>
       </Routes>
     </BrowserRouter>

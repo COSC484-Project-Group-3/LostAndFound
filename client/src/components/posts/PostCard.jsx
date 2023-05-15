@@ -3,10 +3,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { AuthService } from '../../services/auth.service';
 import { PostService } from '../../services/post.service';
+import { useNavigate } from "react-router-dom";
 
 const PostCard = ({post}) => {
+  const navigate = useNavigate();
+  
   let isAuthor = false;
   if (AuthService.isLoggedIn()) {
     const userId = AuthService.getToken("id");
@@ -25,9 +29,23 @@ const PostCard = ({post}) => {
     }
   }
 
+  const UpdatePost = async (postId) => {
+    // set postId
+    localStorage.setItem("postId", postId);
+    navigate("/updatepost")
+
+  }
+
   return (
   <div className="post-card" >
-    {isAuthor &&  <div className="delete-button" onClick={()=> deletePost(post._id)}><FontAwesomeIcon icon={faTrashCan} style={{color: "#ff1514",}} /></div>}
+    {isAuthor &&  
+    <div className='button-container'>
+      <div className='update-button' onClick={()=> UpdatePost(post._id)}><FontAwesomeIcon icon={faPenToSquare} style={{color: "#62bcf4",}} /></div>
+      <div className="delete-button" onClick={()=> deletePost(post._id)}><FontAwesomeIcon icon={faTrashCan} style={{color: "#ff1514",}} />
+      </div>
+    </div>
+
+    }
     <div className="post-card-img-container">
         <img className="post-card-img" src={post.image} alt="post-img" />
     </div>
