@@ -12,6 +12,7 @@ import ChangePassword from "./pages/ChangePassword";
 import { Switch } from "@mui/material";
 import NotFound from "./pages/NotFound";
 import UpdatePost from "./pages/UpdatePost";
+import TermsofService from "./pages/TermsofService";
 const App = () => {
   return (
     <BrowserRouter>
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/about" element={<About/>}></Route>
         <Route path="/updatepost" element={<UpdatePost/>}></Route>
         <Route path="*" element={<NotFound/>}></Route>
+        <Route path="/terms"element={<TermsofService/>}></Route>
       </Routes>
     </BrowserRouter>
   );

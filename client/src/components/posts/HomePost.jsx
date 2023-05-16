@@ -11,6 +11,8 @@ import { MAPBOX_TOKEN } from '../../constants/env';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import PostCardSkeleton from "../loading/PostCardSkeleton";
 import PostCard from "./PostCard";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 const HomePost = () => {
     const [posts, setPosts] = useState([]);
     const [post, setPost] = useState('');

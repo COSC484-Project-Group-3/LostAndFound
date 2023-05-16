@@ -44,18 +44,18 @@ const ProfileInfo = () => {
         }
     };
   return <div className="profile-info-container">
-    <div className="profile-info-header">
-        <div className='profile-info-name'>
-            <p >{profileName}</p>
-            <p >{location}</p>
-        </div>
-    </div>
+
     <div className="profile-info-image">
         <div className='profile-img-container'>
                 <img className='profile-img' src={profilePicture} referrerPolicy="no-referrer"/>
         </div>
     </div>
-    <div className="lost-items-header">Lost Items</div>
+    <div className="profile-info-header">
+        <div className='profile-info-name'>
+            <p >@{profileName}</p>
+            <p >{location}</p>
+        </div>
+    </div>
     <div className="profile-info-posts">
             {posts && posts.map((post) => (
             <PostCard post={post} />

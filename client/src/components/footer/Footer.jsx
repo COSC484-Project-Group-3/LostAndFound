@@ -1,8 +1,11 @@
 import React from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import './Footer.css';
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
+  const navigate = useNavigate();
+
   return (
     <footer className="footer">
       <div className="footer__container">
@@ -22,8 +25,12 @@ function Footer() {
       </div>
       <div className='footer_icon1'> <h1>About us </h1><p className='footer_textp'>Lostandfound is a company dedicated to helping people recover their lost items. With a team of experts and advanced technology, we provide an efficient and reliable service that aims to return lost items to their rightful owners</p>
 
+<input style={{marginBottom:"10px"}} type="button" value="terms of service" onClick={()=>navigate("/terms ")}/>
 </div>
+<input type="button" value="About Us" onClick={()=>navigate("/About")} />
+
     </footer>
+    
   );
 }
 
