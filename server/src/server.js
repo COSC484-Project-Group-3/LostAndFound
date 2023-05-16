@@ -7,7 +7,7 @@ import LocationRoutes from './routes/location.routes.js';
 
 export class Server {
     app;
-    
+    appServer = null;
     /**
      * A function to start the server
      */
@@ -18,7 +18,17 @@ export class Server {
         this.middleware();
         this.setPort();
         this.routes();
-        this.listen();
+        return this.app;
+    }
+
+    /**
+     * A function to close the server
+     * @returns {Promise<void>}
+     */
+    static async close() {
+        await MongoDB.disconnect();
+        this.appServer.close();
+        console.log('SERVER CLOSED')
     }
 
     // set port
@@ -40,8 +50,8 @@ export class Server {
     }
 
     // listen
-    static async listen() {
-        this.app.listen(this.app.get('port'));
+    static async listen(port) {
+        this.appServer = this.app.listen(this.app.get('port') || port);
         // api gateway
         this.app.get('/', (req, res) => {
             res.json({ message: 'Welcome to Lost And Found Api.' });
